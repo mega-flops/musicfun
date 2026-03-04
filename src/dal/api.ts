@@ -8,7 +8,7 @@ export const getTrack = (trackId: string) => {
     "https://musicfun.it-incubator.app/api/1.0/playlists/tracks/" + trackId,
     {
       headers: {
-        "api-key": "28c7f075-ca0f-4710-ab7b-bb884ed3aaa0",
+        //"api-key": "28c7f075-ca0f-4710-ab7b-bb884ed3aaa0",
       },
     },
   ).then((res) => res.json());
@@ -20,7 +20,9 @@ export const getTracks = () => {
   const promise: Promise<GetTrackListOutput> = fetch(
     "https://musicfun.it-incubator.app/api/1.0/playlists/tracks",
     {
-      headers: { "api-key": "28c7f075-ca0f-4710-ab7b-bb884ed3aaa0" },
+      headers: {
+        //"api-key": "28c7f075-ca0f-4710-ab7b-bb884ed3aaa0"
+      },
     },
   ).then((res) => res.json());
   return promise;
